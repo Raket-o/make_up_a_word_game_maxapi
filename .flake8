@@ -1,0 +1,9 @@
+[flake8]
+exclude =
+    tests
+    __pycache__
+    venv
+    postgresql
+    mongo_db
+    nginx
+
