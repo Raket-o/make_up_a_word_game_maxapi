@@ -1,5 +1,5 @@
 """
-Модуль конфигурации бота на основе Pydantic Settings.
+Модуль конфигурации бота.
 Загружает переменные окружения из `.env`
 """
 
@@ -14,6 +14,8 @@ else:
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 START_MESSAGE = os.getenv("START_MESSAGE")
-ADMINS_ID = set(int(i) for i in os.getenv("ADMINS_ID").split()) \
-    if os.getenv("ADMINS_ID") \
+ADMINS_ID = (
+    set(int(i) for i in os.getenv("ADMINS_ID").split())
+    if os.getenv("ADMINS_ID")
     else []
+)
